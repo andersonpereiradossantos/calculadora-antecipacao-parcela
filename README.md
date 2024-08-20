@@ -1,4 +1,4 @@
-# calc-desconto-parcela
+# Calculadora de Desconto de Antecipação de Parcelas
 
 ## Project setup
 ```
