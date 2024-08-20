@@ -1,4 +1,4 @@
-# calc-desconto-parcela-nubank
+# calc-desconto-parcela
 
 ## Project setup
 ```
