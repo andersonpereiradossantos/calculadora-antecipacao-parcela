@@ -8,7 +8,7 @@
           <input type="number" id="valorTotal" class="form-control text-center" v-model.number="valorParcela" step="0.01" min="0" maxlength="5cle">
         </div>
         <div class="col-md-4">
-          <label for="parcelas">Parcelas a serem antecipadas:</label>
+          <label for="parcelas">Total de parcelas restantes:</label>
           <input type="number" id="parcelas" class="form-control text-center" v-model.number="parcelas" min="1" maxlength="3">
         </div>
         <div class="col-md-4">

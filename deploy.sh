@@ -12,14 +12,24 @@ cd dist
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 
-git init
+# Initialize a new Git repository if one does not exist
+if [ ! -d .git ]; then
+  git init
+fi
+
+# Check if 'main' branch exists, create it if not
+if ! git show-ref --quiet refs/heads/main; then
+  git checkout -b main
+else
+  git checkout main
+fi
+
+# Add all changes to the repository and commit
 git add -A
 git commit -m 'deploy'
 
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
+# Force push to the gh-pages branch on GitHub
+git push -f https://github.com/andersonpereiradossantos/calculadora-antecipacao-parcelas.git main:gh-pages
 
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:andersonpereiradossantos/calculadora-antecipacao-parcelas.git main:gh-pages
-
+# Go back to the previous directory
 cd -
